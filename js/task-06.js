@@ -9,11 +9,10 @@ function onInputChange(event) {
 };
 
 refs.textInput.addEventListener("blur", () => {
-    if (lengthValue >= refs.inputLenght.dataset.length) {
-        refs.textInput.value = "";
+    if (lengthValue === Number(refs.inputLenght.dataset.length)) {
         refs.textInput.classList.add("valid");
         refs.textInput.classList.remove('invalid');
-    }else{refs.textInput.value = "";
+    }else{
         refs.textInput.classList.add("invalid");
     refs.textInput.classList.remove('valid');}
 });
